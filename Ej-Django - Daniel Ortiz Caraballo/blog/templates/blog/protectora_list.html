@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Protectoras - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Protectoras</h1>
+    {% for protectora in protectoras %}
+        <p>
+            Nombre: {{ protectora.nombre }}<br>
+            Descripción: {{ protectora.descripcion }}<br>
+            Fecha de creación: {{ protectora.fecha_creacion }}
+        </p>
+    {% empty %}
+        <p>No hay protectoras registradas.</p>
+    {% endfor %}
+</body>
+</html>

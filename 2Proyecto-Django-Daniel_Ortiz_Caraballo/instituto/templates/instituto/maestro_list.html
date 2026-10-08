@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Maestros - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Maestros</h1>
+    {% for maestro in maestros %}
+        <p>
+            Nombre: {{ maestro.nombre }}<br>
+            Cargo: {{ maestro.get_cargo_display }}<br>
+            Fecha de incorporación: {{ maestro.fecha_incorporacion|date:"d/m/Y" }}
+        </p>
+    {% empty %}
+        <p>No hay maestros registrados.</p>
+    {% endfor %}
+</body>
+</html>

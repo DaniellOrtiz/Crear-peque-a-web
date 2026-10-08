@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Colaboradores - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Colaboradores</h1>
+    {% for colaborador in colaboradores %}
+        <p>
+            Nombre: {{ colaborador.nombre }}<br>
+            Cargo: {{ colaborador.cargo }}<br>
+            Fecha de entrada: {{ colaborador.fecha_entrada_protectora }}
+        </p>
+    {% empty %}
+        <p>No hay colaboradores registrados.</p>
+    {% endfor %}
+</body>
+</html>

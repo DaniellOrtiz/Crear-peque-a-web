@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Animales - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Animales</h1>
+    {% for animal in animales %}
+        <p>
+            Nombre: {{ animal.nombre }}<br>
+            Tipo: {{ animal.tipo }}<br>
+            Cuidador: {{ animal.cuidador.username }}
+        </p>
+    {% empty %}
+        <p>No hay animales registrados.</p>
+    {% endfor %}
+</body>
+</html>

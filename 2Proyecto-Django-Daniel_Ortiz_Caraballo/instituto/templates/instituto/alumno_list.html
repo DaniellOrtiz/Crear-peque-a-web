@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Alumnos</h1>
+    {% for alumno in alumnos %}
+        <p>
+            Nombre: {{ alumno.nombre }}<br>
+            Curso: {{ alumno.curso }}<br>
+            Rol: {{ alumno.get_rol_display }}
+        </p>
+    {% empty %}
+        <p>No hay alumnos registrados.</p>
+    {% endfor %}
+</body>
+</html>

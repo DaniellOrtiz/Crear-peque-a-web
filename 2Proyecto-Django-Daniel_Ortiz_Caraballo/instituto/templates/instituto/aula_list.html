@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aulas - Daniel Ortiz Caraballo</title>
+</head>
+<body>
+    <h1>Aulas</h1>
+    {% for aula in aulas %}
+        <p>
+            Nombre: {{ aula.nombre }}<br>
+            Número de aula: {{ aula.numero }}<br>
+            Tipo: {{ aula.get_es_aula_huesped_display }}
+        </p>
+    {% empty %}
+        <p>No hay aulas registradas.</p>
+    {% endfor %}
+</body>
+</html>
